@@ -36,9 +36,12 @@ void main(List<String> args) {
   final pacientesSP = pacientes.where((paciente) => paciente.contains('|SP'));
   print(pacientesSP.length);
 
+  // pacientes.add('')
+
   //Baseado no array acima monte um relatório onde
   //1 - Apresente os pacientes com mais de 20 anos e imprima o nome deles
   //2 - Apresenta quantos pacientes existem para cada profissão(desenvolvedor, estudante, dentista, jornalista)
   //3 - Apresenta a quantidade de pacientes que moram em SP
-  
+  //4 - Inclua o nome, idade, profissão e estado de origem dos participantes do grupo no array
+  //5 - Apresenta a quantidade total de pacientes do array
 }
