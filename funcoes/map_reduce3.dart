@@ -21,4 +21,8 @@ void main(List<String> args) {
   .map( (nota) => (nota as double) )
   .reduce( (t, a) => t + a );
   print(total);
+
+
+
+  print('Media é: ${total / alunos.length}');
 }
