@@ -12,13 +12,18 @@ void main(List<String> args) {
     'João Rahman|55|Jornalista|RJ',
   ];
 
+    //Parte 1
+  var pacientesMaior20 = [];
   pacientes.forEach((paciente) {
     final dadosPaciente = paciente.split('|');
     final idade = int.parse(dadosPaciente[1]);
     if (idade > 20) {
-      print(dadosPaciente[0]);
+      pacientesMaior20.add(dadosPaciente[0]);
     }
   }); 
+      print("Pacientes com mais de 20 anos: $pacientesMaior20");
+
+  //Parte 2
 
   final ocupacoes = <String, int>{};
   pacientes.forEach((paciente) {
@@ -30,13 +35,20 @@ void main(List<String> args) {
       ocupacoes[ocupacao] = ocupacoes[ocupacao]! + 1;
     }
   });
-
   print(ocupacoes);
 
-  final pacientesSP = pacientes.where((paciente) => paciente.contains('|SP'));
-  print(pacientesSP.length);
+  //Parte 3
 
-  // pacientes.add('')
+  final pacientesSP = pacientes.where((paciente) => paciente.contains('|SP'));
+  print("Pacientes que moram em SP: ${pacientesSP.length}");
+
+  //Parte 4
+  pacientes.add('André Kenzo | 19 | Desenvolvedor | SP');
+  pacientes.add('Breno Tosi | 21 | Desenvolvedor | SP');
+  pacientes.add('Gustavo Omai | 20 | Desenvolvedor | SP');
+
+  //Parte 5
+  print("Total de pacientes: ${pacientes.length}");
 
   //Baseado no array acima monte um relatório onde
   //1 - Apresente os pacientes com mais de 20 anos e imprima o nome deles
